@@ -1,0 +1,40 @@
+{
+  "name": "react-alpine-example-tier-1",
+  "version": "0.0.1",
+  "description": "Naive implementation gen 1.",
+  "scripts": {
+    "start": "yarn dev",
+    "clean": "rm -rf dist && mkdir dist",
+    "dev": "yarn clean && react-bau start",
+    "build": "react-bau build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorianRappl/react-alpine.git"
+  },
+  "keywords": [
+    "react",
+    "alpine",
+    "performance"
+  ],
+  "author": "Florian Rappl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlorianRappl/react-alpine/issues"
+  },
+  "homepage": "https://react-alpine.js.org",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@types/styled-components": "^5.1.25",
+    "react-bau": "0.0.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-alpine": "0.0.1",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5"
+  }
+}

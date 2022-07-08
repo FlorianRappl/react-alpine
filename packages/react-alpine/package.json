@@ -1,14 +1,8 @@
 {
-  "name": "react-alpine-monorepo",
-  "private": true,
-  "description": "Idea for a very lightweight JS-in-JS implementation.",
-  "scripts": {
-    "tier-1": "yarn workspace react-alpine-example-tier-1 run start"
-  },
-  "workspaces": [
-    "examples/*",
-    "packages/*"
-  ],
+  "name": "react-alpine",
+  "version": "0.0.1",
+  "description": "Library for SSG.",
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FlorianRappl/react-alpine.git"
@@ -18,6 +12,8 @@
     "alpine",
     "performance"
   ],
+  "main": "src/index.ts",
+  "source": "src/index.ts",
   "author": "Florian Rappl",
   "license": "MIT",
   "bugs": {
@@ -25,9 +21,7 @@
   },
   "homepage": "https://react-alpine.js.org",
   "devDependencies": {
-    "@types/node": "^18.0.0",
-    "gh-pages": "^4.0.0",
-    "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
-  }
+  },
+  "dependencies": {}
 }

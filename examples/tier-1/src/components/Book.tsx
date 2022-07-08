@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { useData } from 'react-alpine';
 import Image from './Image';
 import frontPng from '../assets/front-small.png';
 import frontWebp from '../assets/front-small.webp';
-import { useData } from '../hooks/useData';
 
 const Intro = styled.q`
   font-size: 2rem;
@@ -43,7 +43,7 @@ function Book() {
           height={371}
         />
       </Center>
-      <Intro>Build the fastest websites.</Intro>
+      <Intro>Look here</Intro>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora repellendus ex ducimus maiores repudiandae
         optio mollitia nulla totam, accusantium quibusdam cupiditate quidem iste consequatur minus assumenda nobis amet?

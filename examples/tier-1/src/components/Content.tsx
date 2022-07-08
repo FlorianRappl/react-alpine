@@ -1,9 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import Articles from './Articles';
-import Examples from './Examples';
 import Book from './Book';
-import Videos from './Videos';
 import Links from './Links';
 import Talks from './Talks';
 import Shops from './Shops';
@@ -21,8 +19,6 @@ const Grid = styled.div`
       'book'
       'articles'
       'talks'
-      'videos'
-      'examples'
       'shops'
       'links';
   }
@@ -30,10 +26,9 @@ const Grid = styled.div`
   @media only screen and (min-width: 1000px) {
     grid-template-areas:
       'book         book'
-      'articles   videos'
-      'articles examples'
-      'articles    shops'
-      'talks       links';
+      'articles    talks'
+      'articles    links'
+      'articles    shops';
     grid-template-columns: 1fr 1fr;
   }
 `;
@@ -45,10 +40,8 @@ function Content() {
       <Grid>
         <Book />
         <Articles />
-        <Examples />
         <Shops />
         <Talks />
-        <Videos />
         <Links />
       </Grid>
       <Footer />

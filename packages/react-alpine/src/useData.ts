@@ -1,4 +1,4 @@
-import { scripts, replacements } from '../scripts';
+import { scripts, replacements } from './scripts';
 
 type StoreValue<T> = T extends Function ? {
   click: Record<string, string>;

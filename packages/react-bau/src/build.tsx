@@ -2,13 +2,14 @@ import * as React from 'react';
 import { resolve } from 'path';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
+import { scripts, replaceAll } from 'react-alpine';
 import { writeAssets, addAsset, addAssets } from './load-assets';
-import { scripts, replaceAll } from './scripts';
-import Page from './Page';
-import Template from './Template';
 
-const root = resolve(__dirname, '..');
+const root = process.cwd();
+const src = resolve(root, 'src');
 const dist = resolve(root, 'dist');
+const Page = require(`${src}/Page`).default;
+const Template = require(`${src}/Template`).default;
 const sheet = new ServerStyleSheet();
 const content = renderToStaticMarkup(sheet.collectStyles(<Page />));
 const ia = '<script src="//unpkg.com/alpinejs" defer></script>';
@@ -23,11 +24,9 @@ if (process.env.NODE_ENV === 'debug') {
 }
 
 const body = `${replaceAll(content)}<script>${scripts.join(';')}</script>${ia}`;
-const html = renderToStaticMarkup(
-  <Template title="React Alpine Demo" description="A simple React Alpine demo page." style={style} body={body} />,
-);
+const html = renderToStaticMarkup(<Template style={style} body={body} />);
 
-addAssets(resolve(__dirname, 'static'));
+addAssets(resolve(src, 'static'));
 
 addAsset(Buffer.from(`<!DOCTYPE html>${html}`, 'utf-8'), 'index.html');
 
