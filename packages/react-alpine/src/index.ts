@@ -1,2 +1,2 @@
-export * from './useData';
-export * from './scripts';
+export * from './gen1';
+export * from './gen2';

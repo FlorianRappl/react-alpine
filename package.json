@@ -3,7 +3,8 @@
   "private": true,
   "description": "Idea for a very lightweight JS-in-JS implementation.",
   "scripts": {
-    "tier-1": "yarn workspace react-alpine-example-tier-1 run start"
+    "tier-1": "yarn workspace react-alpine-example-tier-1 run start",
+    "tier-2": "yarn workspace react-alpine-example-tier-2 run start"
   },
   "workspaces": [
     "examples/*",
